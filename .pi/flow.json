@@ -9,7 +9,8 @@
   },
   "commandTimeoutMs": 60000,
   "resources": { "mode": "exclusive", "description": "Synthetic data only in FLOW_RESOURCE_DIR; one execution phase at a time" },
-  "artifacts": { "destination": "GitHub release assets in the selected repository", "retentionDays": 90 },
+  "artifacts": { "destination": "GitHub release assets in the selected repository", "retentionDays": 90,
+    "locator": { "kind": "github-release", "tagPrefix": "flow-evidence", "assetName": "evidence.json" } },
   "agents": {
     "implementation": { "tools": ["read", "edit", "write"], "extensions": [], "instructions": ["AGENTS.md"] },
     "review": { "tools": ["read", "grep", "find", "ls"], "extensions": [], "instructions": ["AGENTS.md"], "isolation": "independent-context" },
